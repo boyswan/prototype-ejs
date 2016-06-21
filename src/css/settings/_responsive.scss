@@ -1,0 +1,11 @@
+$breakpoints: (
+    sm:       'screen and (min-width: 480px)',
+    sm-:       'screen and (min-width: 480px)',
+    md:       'screen and (min-width: 768px)',
+    md-:       'screen and (max-width: 767px)',
+    lg:       'screen and (min-width: 1024px)',
+    xl:       'screen and (min-width: 1280px)',
+    retina:   '(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)'
+) !default;
+
+$breakpoint-spacer: \@!default;

@@ -1,0 +1,17 @@
+.card-feed {
+  border-bottom: 1px #eeeeee solid;
+  padding: rem(20);
+  color: $color-text;
+
+  &__wrap {
+    display: inline-block;
+  }
+
+  &__wrap {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-left: 10px;
+  }
+
+}

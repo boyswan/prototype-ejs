@@ -1,0 +1,50 @@
+
+.card-candidate {
+	float: left;
+	background: $color-white;
+	@include card-shadow();
+	@include rem(margin-bottom, 20px);
+
+	&__profile {
+		position: relative;
+		width: 100%;
+		height: em(150);
+		overflow: hidden;
+		background-size: cover;
+  	background-position: center;
+	}
+
+	&__content {
+		width: 100%;
+		@include rem(padding, 15px);
+	}
+
+	&__image {
+		width: 100%;
+		height: auto;
+	}
+
+	&__title,
+	&__user {
+		color: $color-primary;
+		font-weight: normal;
+		@include rem(margin-bottom, 10px);
+	}
+
+	&__title {
+		@include rem(font-size, 16px);
+		@include line-height(22, 16);
+	}
+
+	&__user {
+		color: $color-secondary;
+		@include rem(font-size, 13px);
+		@include line-height(20, 13);
+	}
+}
+
+@include media-query(md-) {
+	.card-candidate {
+		width: 100%;
+	}
+}

@@ -1,0 +1,21 @@
+.round-icons {
+  padding: em(5);
+  position: absolute;
+  right: 0;
+  &__button {
+    border: none;
+    background-color: $color-white;
+    // width: em(40);
+    height: em(40);
+    border-radius: 100%;
+    margin: em(10);
+  }
+  &__feed {
+    border: none;
+    display: inline-block;
+    background-color: $color-white;
+    background-size: 30px;
+    border-radius: 100%;
+    margin: 0;
+  }
+}

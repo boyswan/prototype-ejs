@@ -1,0 +1,87 @@
+
+.card-job {
+	padding: em(20);
+	position: relative;
+	display: inline-block;
+	background: $color-white;
+	@include card-shadow();
+	margin: em(20);
+	width: 95%;
+	color: $color-text;
+
+	&__listing {
+		margin-bottom: em(10);
+	}
+
+	&__tags {
+		clear: both;
+	}
+
+	&__headingWrap {
+		float: left;
+		width: 75%;
+	}
+
+	&__listing-wrap {
+		float: left;
+		width: 100%;
+		margin-bottom: em(15);
+	}
+
+	&__title {
+		@include rem(font-size, 16px);
+		margin-bottom: em(5);
+		font-weight: normal;
+		width: 80%;
+	}
+
+	&__agency {
+		@include rem(font-size, 14px);
+		font-size: 14px;
+		font-weight: normal;
+	}
+
+	&__description {
+		@include rem(font-size, 14px);
+		@include line-height(20,14);
+	}
+
+	&__list {
+		padding-bottom: em(10);
+	}
+
+	&__button {
+		border: none;
+		background-color: $color-white;
+		width: em(40);
+		height: em(40);
+		border-radius: 100%;
+		margin: em(10);
+		&__wrap {
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+	}
+	.round-icons {
+		display: inline-block;
+		top: 0;
+	}
+}
+
+.all-jobs .card-job {
+	&:first-of-type {
+		margin-top: 115px;
+	}
+}
+
+@include media-query(md-) {
+	.card-job {
+		margin: 0;
+		margin-bottom: em(20);
+		&__listing,
+		&__info {
+			float: left;
+		}
+	}
+}

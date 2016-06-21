@@ -1,0 +1,21 @@
+$widths-columns-responsive: (
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    8,
+    9,
+    10,
+    11,
+    12
+) !default;
+
+@each $alias, $condition in $breakpoints {
+  @include media-query($alias) {
+    @each $widths-column in $widths-columns-responsive {
+      @include widths($widths-column, #{$breakpoint-spacer}#{$alias});
+    }
+  }
+}

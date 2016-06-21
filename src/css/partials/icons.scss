@@ -1,0 +1,62 @@
+$element-name: icon;
+
+.icon {
+	display: block;
+	width: em(60);
+	height: em(60);
+	background-size: 30%;
+	background-position: center;
+	background-repeat: no-repeat;
+	opacity: 1;
+	@include ease (0.2s);
+
+	&.logo {
+		background-image: url('../../public/assets/svg/logo.svg');
+		float: left;
+	}
+
+	&.more {
+		background-image: url('../../public/assets/svg/more.svg');
+	}
+
+	&.timesheet {
+		background-image: url('../../public/assets/svg/timesheet.svg');
+	}
+
+	&.save {
+		background-image: url('../../public/assets/svg/save.svg');
+	}
+
+	&.saved {
+		background-image: url('../../public/assets/svg/saved.svg');
+	}
+
+	&.search {
+		background-image: url('../../public/assets/svg/search.svg');
+	}
+
+	&.jobs {
+		background-image: url('../../public/assets/svg/jobs.svg');
+	}
+
+	&.chat {
+		background-image: url('../../public/assets/svg/chat.svg');
+	}
+
+	&.message {
+		background-image: url('../../public/assets/svg/message.svg');
+	}
+
+	&.tick {
+		background-image: url('../../public/assets/svg/tick.svg');
+	}
+
+	&.logout {
+		background-image: url('../../public/assets/svg/logout.svg');
+	}
+
+	&.settings {
+		background-image: url('../../public/assets/svg/settings.svg');
+	}
+
+}

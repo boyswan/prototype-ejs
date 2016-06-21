@@ -1,0 +1,32 @@
+.search-bar {
+  position: relative;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.8);
+  margin: 1em;
+  border-radius: 100px;
+  width: 61%;
+  left: 64%;
+  margin-left: -32%;
+  position: fixed;
+  z-index: 10;
+
+  input[type="text"] { 
+    width: 90%;
+    border: none;
+    font-size: rem(24);
+    // padding: 1em;
+    height: 40px;
+    background: transparent;
+  }
+  
+  button {
+    background: $color-primary;
+    right: 0;
+    position: absolute;
+    width: 10%;
+    border-radius: 0 25px 25px 0;
+    border: none;
+    height: 100%;
+  }
+
+}

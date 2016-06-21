@@ -1,0 +1,33 @@
+body, html{
+  background-color: green;
+}
+#container {
+  position: fixed;
+  width: 100%;
+}
+.screen {
+  width: 100vw;
+  height: 100vh;
+  background: green;
+}
+.screen:nth-child(2) {
+  background: blue;
+}
+
+.screen:nth-child(3) {
+  background: red;
+}
+
+.screen:nth-child(4) {
+  background: yellow;
+}
+
+.aside {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  top: 20px;
+  left: 50%;
+  background: grey;
+  perspective: 3000;
+}

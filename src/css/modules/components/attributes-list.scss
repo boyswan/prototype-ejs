@@ -1,0 +1,29 @@
+$component-name: attributes-list;
+
+.#{$component-name} {
+  margin-bottom: em(10);
+  &__item {
+    &-icon {
+      position: relative;
+      top: em(3);
+      display: inline-block;
+      border-radius: 50%;
+      background-color: #50E3C2;
+      width: em(16);
+      height: em(16);
+    }
+    &-info {
+      padding-left: em(10);
+      display: inline-block;
+      @include rem(font-size, 14px);
+      color: $color-text;
+      @include line-height(19,14);
+    }
+  }
+  &--inline {
+    .#{$component-name}__item {
+      display: inline-block;
+      margin-right: em(10);
+    }
+  }
+}

@@ -1,0 +1,86 @@
+.card-job-full {
+	position: fixed;
+  z-index: 2;
+  top: 50%;
+  transform: translateY(-50%);
+	width: 61%;
+  left: 64%;
+  margin-left: -32%;
+
+  &--dim {
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.6);
+    z-index: 999;
+    position: absolute;
+    top: 0;
+  }
+
+	.attributes-list {
+		margin: em(20) 0;
+	}
+
+	&__title {
+		color: $color-primary;
+		font-weight: normal;
+		@include rem(margin-bottom, 20px);
+	}
+
+	&__listing {
+		background: $color-white;
+		padding: em(20) em(60) em(20) em(20);
+		margin-bottom: em(20);
+		position: relative;
+		@include card-shadow();
+		.round-icons {
+			top: 0;
+		}
+	}
+
+	&__description {
+		color: $color-primary;
+		font-size: em(14);
+		margin-bottom: em(20);
+		@include line-height(18, 14);
+	}
+
+	&__info {
+		background: $color-white;
+		@include card-shadow();
+    &__wrap {
+    	padding: em(20);
+    }
+    &__title {
+			clear: both;
+			padding: em(10) 0;
+			font-weight: normal;
+		}
+	}
+
+	&__map {
+		height: 200px;
+	}
+}
+
+@include media-query(md-) {
+	.card-job-full {
+		width: 90%;
+    left: 50%;
+    margin-left: -45%;
+		&__listing,
+		&__info {
+			width: 100%;
+		}
+	}
+}
+
+@include media-query(lg) {
+	.card-job-full {
+		&__listing {
+			float: left;
+		}
+		&__info {
+			float: right;
+		}
+	}
+}

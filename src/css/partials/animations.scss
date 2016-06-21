@@ -1,0 +1,68 @@
+
+@-webkit-keyframes loginFade {
+  0% {
+		transform: translateY(-500px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes loginFadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+		transform: translateY(-500px);
+    opacity: 0;
+  }
+}
+
+
+@keyframes incorrectPassword {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+
+}
+
+
+.hover-link {
+  display: table;
+  margin: 0 auto;
+  opacity: 1;
+  @include ease(0.2s)
+  &:hover {
+    opacity: 0.5;
+    // transform: translateY(-5px);
+    @include ease(0.2s)
+  }
+}
+
+.hover-detail {
+  display: table;
+  margin: 0 auto;
+  opacity: 1;
+  @include ease(0.2s)
+  &:hover{
+    opacity: 0.5;
+    // transform: scale(1.075);
+    @include ease(0.2s)
+  }
+}
+
+.card-list {  
+  -webkit-filter: blur(0px);
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+}
+.blur {
+  -webkit-filter: blur(10px);
+}

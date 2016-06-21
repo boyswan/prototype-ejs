@@ -1,0 +1,15 @@
+.sidebar {
+   background: white;
+   padding: rem(20);
+}
+
+@include media-query(md) {
+	.sidebar {
+		position: fixed;
+    bottom: 0;
+    top: 0;
+    width: 300px;
+    left: 60px;
+    background: white;
+	}
+}

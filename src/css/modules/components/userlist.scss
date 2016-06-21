@@ -1,0 +1,36 @@
+.userlist {
+  clear: both;
+  max-height: em(170);
+  overflow-y: scroll;
+  &__item {
+    overflow: hidden;
+    width: 100%;
+    display: table;
+  }
+  &__imageWrap,
+  &__user {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  &__user {
+    padding-left: em(10);
+  }
+  &__imageWrap {
+    width: 20%;
+  }
+  &__image {
+    width: em(48);
+    height: em(48);
+    border-radius: 50%;
+  }
+  .icon {
+    float: right;
+  }
+  &__title,
+  &__sub {
+    @include rem(font-size, 14px);
+    @include line-height(18, 14);
+    color: #434343;
+    font-weight: normal;
+  }
+}

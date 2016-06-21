@@ -1,0 +1,42 @@
+/*
+HEADINGS: ---------*/
+h1 {
+  @include rem(font-size, 26px);
+  @include line-height(30, 26);
+}
+
+h2 {
+  @include rem(font-size, 24px);
+  @include line-height(28, 24);
+}
+
+h3 {
+  @include rem(font-size, 22px);
+  @include line-height(26, 22);
+}
+
+h4 {
+  @include rem(font-size, 22px);
+  @include line-height(24, 22);
+}
+
+h5 {
+  @include rem(font-size, 20px);
+  @include line-height(22, 20);
+}
+
+h6 {
+  @include rem(font-size, 18px);
+  @include line-height(20, 18);
+}
+
+/*
+TYPOGRAPHY: ---------*/
+
+p {
+  @include rem(font-size, 13px);
+}
+
+a {
+  @include rem(font-size, 13px);
+}

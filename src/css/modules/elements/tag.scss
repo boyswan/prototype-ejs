@@ -1,0 +1,11 @@
+.tag {
+	display: inline-block;
+	padding: em(5) em(10);
+	margin: em(2);
+	border-radius: em(100);
+	@include rem(font-size, 10px);
+	text-align: center;
+	color: $color-white;
+	background: $color-primary;
+	@include line-height(16, 12);
+}

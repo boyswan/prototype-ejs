@@ -1,0 +1,73 @@
+@import 'mixins/rem';
+
+@mixin media-query($name, $include-retina: false) {
+  @if (not map-has-key($breakpoints, $name)) {
+    @warn "Oops! Breakpoint ‘#{$name}’ does not exist.";
+  }
+
+  @if ($include-retina == false) {
+    $breakpoints: map-remove($breakpoints, 'retina');
+  }
+
+  @each $alias, $condition in $breakpoints {
+    @if ($name == $alias and $condition) {
+      @media #{$condition} {
+        @content;
+      }
+    }
+  }
+}
+
+@mixin line-height($line-height, $font-size) {
+  line-height: $line-height / $font-size;
+}
+
+/*
+MISC
+========================== */
+
+// Ease-in-out transition
+@mixin ease($time) {
+  transition: all $time ease-in-out;
+}
+
+@mixin card-shadow {
+  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.12);
+}
+
+
+/*
+Breakpoints
+========================== */
+
+$widths-delimiter: \/;
+
+@mixin widths($widths-columns, $widths-breakpoint: null) {
+  @each $widths-denominator in $widths-columns {
+    @if ($widths-denominator == 1) {
+      .u-1#{$widths-delimiter}1#{$widths-breakpoint} {
+        width: 100%;
+      }
+    } @else {
+      @for $widths-numerator from 1 to $widths-denominator {
+        // Build a class in the format `.u-3/4` or `.u-3-of-4`.
+        .u-#{$widths-numerator}#{$widths-delimiter}#{$widths-denominator}#{$widths-breakpoint} {
+            width: (($widths-numerator / $widths-denominator) * 100%) - 2%;
+            margin-left: 1%;
+            margin-right: 1%;
+            margin-bottom: 1%;
+            margin-top: 1%;
+        }
+        .u-#{$widths-numerator}#{$widths-delimiter}#{$widths-denominator}#{$widths-breakpoint}--nom {
+          width: (($widths-numerator / $widths-denominator) * 100%);
+        }
+        .u-#{$widths-numerator}#{$widths-delimiter}#{$widths-denominator}#{$widths-breakpoint}--ml {
+          margin-left: (($widths-numerator / $widths-denominator) * 100%);
+        }
+        .u-#{$widths-numerator}#{$widths-delimiter}#{$widths-denominator}#{$widths-breakpoint}--left {
+          left: (($widths-numerator / $widths-denominator) * 100%);
+        }
+      }
+    }
+  }
+}
